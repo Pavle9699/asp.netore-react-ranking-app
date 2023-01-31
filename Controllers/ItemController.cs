@@ -32,7 +32,7 @@ namespace RankingApp.Controllers
 
         };
 
-        [HttpGet("{itemType:int}")]
+        [HttpGet("{itemType:int}")] // Int must ba passsed to it
         public ItemModel[] Get(int itemType)
         {
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
